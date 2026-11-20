@@ -121,7 +121,8 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
   --wrap: min(100% - clamp(36px, 9.4vw, 160px), 1232px);
 }
 *,*::before,*::after{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:24px}
+html{scroll-behavior:smooth;scroll-padding-top:24px;scrollbar-width:none}
+html::-webkit-scrollbar{display:none}
 html.lenis-smooth{scroll-behavior:auto}
 body{margin:0;background:var(--ink);color:var(--paper);font:400 1rem/1.45 Barlow,Arial,sans-serif}
 main{background:var(--coal)}
