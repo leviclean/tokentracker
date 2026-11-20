@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1e1712">
+  <meta name="description" content="Token Tracker is a Windows overlay that reacts to the visible Fortnite chest cue. Try the interactive radar demo.">
+  <title>Token Tracker — Chest Cue Overlay</title>
+  <link rel="icon" type="image/png" sizes="48x48" href="assets/icon.png?v=tracker">
+  <link rel="preload" href="assets/barlow-condensed-900.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="site.css">
+  <script src="site.js" defer></script>
+</head>
+<body id="top">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#top"><span class="brand-icon" aria-hidden="true"></span> TOKEN TRACKER</a>
+      <nav aria-label="Main navigation">
+        <a href="#artwork">Artwork</a>
+        <a href="#demo">Demo</a>
+        <a href="#access">Pricing</a>
+      </nav>
+      <a class="button button-small" href="#access">Get access <span aria-hidden="true"></span></a>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap hero-scene">
+        <h1 id="hero-title" class="hero-title">
+          <span>Token</span>
+          <span>Tracker</span>
+        </h1>
+        <div class="hero-orbit" aria-hidden="true"></div>
+        <img class="hero-chest" src="assets/chest.webp" alt="" width="900" height="800" fetchpriority="high" decoding="async">
+        <img class="token token-hero-top" src="assets/token.webp" alt="" width="354" height="378" decoding="async">
+        <img class="token token-hero-mid" src="assets/token.webp" alt="" width="354" height="378" decoding="async">
+        <img class="token token-hero-low" src="assets/token.webp" alt="" width="354" height="378" decoding="async">
+        <img class="token token-hero-edge" src="assets/token.webp" alt="" width="354" height="378" decoding="async">
+        <div class="hero-copy">
+          <p class="eyebrow">Windows chest cue overlay</p>
+          <p>A golden radar that reacts to the visible chest cue in Fortnite.</p>
+          <a class="button" href="#demo">Try the radar <span class="arrow-down" aria-hidden="true"></span></a>
+        </div>
+        <a class="hero-sticker" href="#artwork">Explore<br>the artwork <span aria-hidden="true">↓</span></a>
+      </div>
+    </section>
+
+    <section id="artwork" class="artwork section-dark" aria-labelledby="artwork-title">
+      <div class="wrap">
+        <div class="section-heading">
+          <p class="eyebrow">Campaign mockups</p>
+          <h2 id="artwork-title">The <em>treasure hunt.</em></h2>
+        </div>
+        <div class="concept-grid">
+          <figure class="concept">
+            <img src="assets/concept-01.webp" alt="Illustrated Pirate Shop Access reward screen against a warm-toned gameplay scene" width="1200" height="680" loading="lazy" decoding="async">
+            <img class="token" src="assets/token.webp" alt="" width="354" height="378" loading="lazy" decoding="async">
+            <figcaption>
+              <span class="eyebrow">Draft quote</span>
+              <blockquote>“I used it for two days and found the token.”</blockquote>
+            </figcaption>
+          </figure>
+          <figure class="concept">
+            <img src="assets/concept-02.webp" alt="Illustrated Pirate Shop Access reward screen against a blue coastal gameplay scene" width="1200" height="688" loading="lazy" decoding="async">
+            <img class="token" src="assets/token.webp" alt="" width="354" height="378" loading="lazy" decoding="async">
+            <figcaption>
+              <span class="eyebrow">Draft quote</span>
+              <blockquote>“I found Pirate Shop access in the second chest of the match.”</blockquote>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="demo" class="demo" aria-labelledby="demo-title">
+      <div class="wrap demo-grid">
+        <div class="demo-copy">
+          <p class="eyebrow">Interactive demo</p>
+          <h2 id="demo-title">Try<br><span>the tracker.</span></h2>
+          <p>Simulate a chest cue to see how the visor responds. The percentage is a visual effect.</p>
+          <button class="button button-dark" type="button" id="cue-toggle" aria-pressed="false" disabled>Simulate chest cue <span aria-hidden="true"></span></button>
+          <noscript><p>Enable JavaScript to try the radar.</p></noscript>
+        </div>
+        <div class="demo-visual">
+          <img class="token" src="assets/token.webp" alt="" width="354" height="378" loading="lazy" decoding="async">
+          <div class="hud" aria-hidden="true">
+            <div class="radar"><div class="radar-sweep"></div></div>
+            <output id="tracker-value" aria-live="off">1%</output>
+          </div>
+          <p id="demo-status" class="demo-status" role="status">Idle · 1%</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="setup" id="setup" aria-labelledby="setup-title">
+      <div class="wrap">
+        <div class="section-heading">
+          <p class="eyebrow">Setup</p>
+          <h2 id="setup-title">Ready to <em>play.</em></h2>
+        </div>
+        <ol class="steps">
+          <li><span class="step-icon" aria-hidden="true">→</span><h3>Open the visor</h3><p>Launch the Windows app.</p></li>
+          <li><span class="step-icon" aria-hidden="true">◉</span><h3>Turn on visual cues</h3><p>Enable Visualize Sound Effects in Fortnite’s audio settings.</p></li>
+          <li><span class="step-icon" aria-hidden="true">↔</span><h3>Keep playing</h3><p>Clicks pass through the overlay to the game window.</p></li>
+          <li><span class="step-icon" aria-hidden="true">×</span><h3>Exit from the tray</h3><p>Right-click the icon near the Windows clock and select Exit.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="access" class="pricing" aria-labelledby="access-title">
+      <div class="wrap pricing-grid">
+        <div class="pricing-copy">
+          <p class="eyebrow">Windows overlay</p>
+          <h2 id="access-title">Get <em>Token<br>Tracker.</em></h2>
+          <p>The visor reads visible chest cues on your screen without modifying game files. Rewards and shop access are determined by the game.</p>
+          <img class="token pricing-token-top" src="assets/token.webp" alt="" width="354" height="378" loading="lazy" decoding="async">
+          <img class="token pricing-token-low" src="assets/token.webp" alt="" width="354" height="378" loading="lazy" decoding="async">
+        </div>
+        <div class="offer">
+          <h3>Token Tracker for Windows</h3>
+          <p class="price">$13 <span>USD</span></p>
+          <ul>
+            <li>Rotating radar</li>
+            <li>Visual chest cue response</li>
+            <li>Click-through overlay</li>
+          </ul>
+          <button class="button buy-button" type="button" aria-describedby="checkout-status" disabled>Buy now <span aria-hidden="true"></span></button>
+          <p id="checkout-status" class="checkout-status">Checkout coming soon.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
+
+
